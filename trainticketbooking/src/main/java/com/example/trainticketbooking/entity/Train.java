@@ -14,6 +14,7 @@ public class Train {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="train_name")
     private String name;
 
     @OneToMany(mappedBy = "train", cascade = CascadeType.ALL)

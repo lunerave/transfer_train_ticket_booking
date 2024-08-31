@@ -26,6 +26,9 @@ public class ReservationController {
                           @RequestParam Long trainId,
                           @RequestParam Long startStationId,
                           @RequestParam Long endStationId, Model model) {
+
+        System.out.println(startStationId);
+        System.out.println(endStationId);
         boolean success = reservationService.reserve(userId, trainId, startStationId, endStationId);
         model.addAttribute("success", success);
         return "reservation";

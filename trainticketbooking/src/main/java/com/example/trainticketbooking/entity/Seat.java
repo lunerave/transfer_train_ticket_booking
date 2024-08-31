@@ -13,6 +13,8 @@ public class Seat {
     private Long id;
 
     private String seatNumber;
+
+    @Column(name="is_reserved")
     private boolean reserved;
 
     @ManyToOne
